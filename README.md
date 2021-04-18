@@ -1,6 +1,6 @@
 # preassembled-worker-boxes
 
-**This project is minimally functional.**
+**This project is in its early stages and may not work robustly or at all.**
 
 This project is meant to help assist you auto-detect your resource files
 (those which an entry file imports or relevant `fetch` or such statements
