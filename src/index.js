@@ -36,6 +36,7 @@ async function preassembledWorkerBoxes (options) {
 
   return {
     info,
+    additionalManifestEntries,
     logFiles () {
       const {warnings, count, size, filePaths} = info;
 
