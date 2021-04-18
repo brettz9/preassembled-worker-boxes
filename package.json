@@ -21,6 +21,7 @@
     "prepublishOnly": "npm run build-cli",
     "build-cli-svg": "clp --format=svg --config=src/optionDefinitions.js badges/cli.svg",
     "build-cli": "npm run build-cli-svg",
+    "bin": "./bin/index.js",
     "eslint": "eslint --ext=jd,md,html",
     "lint": "npm run eslint",
     "mocha": "mocha --require chai/register-expect --timeout 10000",
