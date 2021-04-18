@@ -1,6 +1,6 @@
 # preassembled-worker-boxes
 
-**This project is not yet functional.**
+**This project is minimally functional.**
 
 This project is meant to help assist you auto-detect your resource files
 (those which an entry file imports or relevant `fetch` or such statements
@@ -41,5 +41,6 @@ MIT License, see the included [LICENSE-MIT.tx](LICENSE-MIT.txt) file.
 
 ## To-dos
 
+1. Add binary tests (and get to full coverage).
 1. Use [find-resources](https://www.npmjs.com/package/find-resources) to
     bundle files found during the parsing of HTML and CSS files
