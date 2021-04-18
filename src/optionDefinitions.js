@@ -48,7 +48,8 @@ const optionDefinitions = [
     name: 'workboxBuildOptions', type: JSONParser,
     description: 'Additional options to pass to `workbox-build`. Note that ' +
       '`additionalManifestEntries` will be merged with those discovered by ' +
-      'this library. You can set `swDest` to override this library\'s.'
+      'this library. You can set `swDest` to override this library\'s.',
+    typeLabel: '{underline JSON object string}'
   }
 ];
 
