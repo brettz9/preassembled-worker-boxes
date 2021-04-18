@@ -20,6 +20,10 @@ fetches, etc.
 npm i preassembled-worker-boxes
 ```
 
+## CLI Usage
+
+![badges/cli.svg](./badges/cli.svg)
+
 ## See also
 
 - [find-es-resources](https://github.com/brettz9/find-es-resources)

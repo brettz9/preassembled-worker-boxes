@@ -18,6 +18,9 @@
     "cover 100%"
   ],
   "scripts": {
+    "prepublishOnly": "npm run build-cli",
+    "build-cli-svg": "clp --format=svg --config=src/optionDefinitions.js badges/cli.svg",
+    "build-cli": "npm run build-cli-svg",
     "eslint": "eslint --ext=jd,md,html",
     "lint": "npm run eslint",
     "mocha": "mocha --require chai/register-expect --timeout 10000",
@@ -42,6 +45,7 @@
   "devDependencies": {
     "@brettz9/eslint-plugin": "^1.0.3",
     "chai": "^4.3.4",
+    "command-line-publish": "^0.7.0",
     "eslint": "^7.24.0",
     "eslint-config-ash-nazg": "29.10.1",
     "eslint-config-standard": "^16.0.2",
