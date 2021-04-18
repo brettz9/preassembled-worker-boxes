@@ -21,6 +21,7 @@ async function preassembledWorkerBoxes (options) {
   const {
     file,
     findESResourcesOptions,
+    workboxBuildOptions,
     swDest = 'sw.js'
   } = options;
 
@@ -30,8 +31,12 @@ async function preassembledWorkerBoxes (options) {
 
   // https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build
   const info = await workboxBuild.generateSW({
-    additionalManifestEntries,
-    swDest
+    swDest,
+    ...workboxBuildOptions,
+    additionalManifestEntries: [...new Set([
+      ...(workboxBuildOptions?.additionalManifestEntries || []),
+      ...additionalManifestEntries
+    ])]
   });
 
   return {
