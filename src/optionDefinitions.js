@@ -28,6 +28,11 @@ const optionDefinitions = [
     typeLabel: '{underline file path}'
   },
   {
+    name: 'config', type: String, alias: 'c',
+    description: 'Config file to require in place of other flags',
+    typeLabel: '{underline path to config file}'
+  },
+  {
     name: 'swDest', type: String, alias: 'o',
     multiple: true,
     description: 'Path to which to save the worker file. Defaults to `sw.js`.',

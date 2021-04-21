@@ -1,5 +1,6 @@
 'use strict';
 
+const path = require('path');
 const workboxBuild = require('workbox-build');
 const findESResources = require('find-es-resources');
 
@@ -24,7 +25,11 @@ async function preassembledWorkerBoxes (options) {
     workboxBuildOptions,
     queryOptions,
     swDest = 'sw.js'
-  } = options;
+  } = options.config
+    // eslint-disable-next-line max-len -- Long
+    // eslint-disable-next-line import/no-dynamic-require, node/global-require -- Runtime
+    ? {...options, ...require(path.join(process.cwd(), options.config))}
+    : options;
 
   const additionalManifestEntries = await findESResources(
     file, findESResourcesOptions, queryOptions

@@ -32,7 +32,7 @@ module.exports = {
       extends: ['ash-nazg/sauron-node-overrides']
     },
     {
-      files: 'test/fixtures/queryModule.js',
+      files: ['test/fixtures/queryModule.js', 'test/fixtures/config.js'],
       extends: ['ash-nazg/sauron-node-script-overrides']
     }
   ],
