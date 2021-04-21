@@ -1,5 +1,11 @@
 # CHANGES for `preassembled-worker-boxes`
 
+## 0.2.0
+
+- Enhancement: Support `find-es-resources` `queryOptions` options
+- npm: Update `find-es-resources` (minor)
+- npm: Update devDeps.
+
 ## 0.1.1
 
 - Fix: Properly indicate flag type

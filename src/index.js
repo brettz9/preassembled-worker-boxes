@@ -22,11 +22,12 @@ async function preassembledWorkerBoxes (options) {
     file,
     findESResourcesOptions,
     workboxBuildOptions,
+    queryOptions,
     swDest = 'sw.js'
   } = options;
 
   const additionalManifestEntries = await findESResources(
-    file, findESResourcesOptions
+    file, findESResourcesOptions, queryOptions
   );
 
   // https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build

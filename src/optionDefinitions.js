@@ -50,6 +50,14 @@ const optionDefinitions = [
       '`additionalManifestEntries` will be merged with those discovered by ' +
       'this library. You can set `swDest` to override this library\'s.',
     typeLabel: '{underline JSON object string}'
+  },
+  {
+    name: 'queryOptions', type: JSONParser,
+    description: 'Additional `queryOptions` to pass to `find-es-resources`. ' +
+      'Note that any items discovered on the object returned by the ' +
+      'requiring of the `queryModule` module will be merged onto the ' +
+      'built-in queries of `find-es-resources`.',
+    typeLabel: '{underline string}'
   }
 ];
 

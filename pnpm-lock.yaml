@@ -6,7 +6,7 @@ specifiers:
   command-line-basics: ^0.8.0
   command-line-publish: ^0.7.0
   eslint: ^7.24.0
-  eslint-config-ash-nazg: 29.10.1
+  eslint-config-ash-nazg: 29.11.0
   eslint-config-standard: ^16.0.2
   eslint-plugin-array-func: ^3.1.7
   eslint-plugin-compat: ^3.9.0
@@ -20,15 +20,15 @@ specifiers:
   eslint-plugin-node: ^11.1.0
   eslint-plugin-promise: ^5.1.0
   eslint-plugin-radar: ^0.2.1
-  eslint-plugin-unicorn: ^29.0.0
-  find-es-resources: ^0.2.1
+  eslint-plugin-unicorn: ^30.0.0
+  find-es-resources: ^0.3.0
   mocha: ^8.3.2
   nyc: ^15.1.0
   workbox-build: ^6.1.5
 
 dependencies:
   command-line-basics: 0.8.0
-  find-es-resources: 0.2.1_dc9d9d711f9715ea38ced5881f20889e
+  find-es-resources: 0.3.0_dc9d9d711f9715ea38ced5881f20889e
   workbox-build: 6.1.5
 
 devDependencies:
@@ -36,7 +36,7 @@ devDependencies:
   chai: 4.3.4
   command-line-publish: 0.7.0
   eslint: 7.24.0
-  eslint-config-ash-nazg: 29.10.1_b55b19e4d6309f0b50c127add60acac6
+  eslint-config-ash-nazg: 29.11.0_1b429e5aafd3b5715ebb05c338838f3d
   eslint-config-standard: 16.0.2_c7c19510773949bb1d32e7b13b7a629e
   eslint-plugin-array-func: 3.1.7_eslint@7.24.0
   eslint-plugin-compat: 3.9.0_eslint@7.24.0
@@ -50,7 +50,7 @@ devDependencies:
   eslint-plugin-node: 11.1.0_eslint@7.24.0
   eslint-plugin-promise: 5.1.0_eslint@7.24.0
   eslint-plugin-radar: 0.2.1_eslint@7.24.0
-  eslint-plugin-unicorn: 29.0.0_eslint@7.24.0
+  eslint-plugin-unicorn: 30.0.0_eslint@7.24.0
   mocha: 8.3.2
   nyc: 15.1.0
 
@@ -2111,8 +2111,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-ash-nazg/29.10.1_b55b19e4d6309f0b50c127add60acac6:
-    resolution: {integrity: sha512-YH0E1+z5DCPRGFdG3hga82EL3K1JrFfRiWz3xcqsnCBDh6CZzVilJftysq4yU/LK5pyvTxcpUUjQ9oNEttExIQ==}
+  /eslint-config-ash-nazg/29.11.0_1b429e5aafd3b5715ebb05c338838f3d:
+    resolution: {integrity: sha512-G2JJpvGWcG9MRidwO3IwTXiRHNC/VsSY7FLgy3ZGIM6JZybO9/t7ZT45HGwHLXc5r9P3DKTvwT80AmnE3xdxVg==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       '@brettz9/eslint-plugin': ^1.0.3
@@ -2130,7 +2130,7 @@ packages:
       eslint-plugin-node: ^11.1.0
       eslint-plugin-promise: ^5.1.0
       eslint-plugin-radar: ^0.2.1
-      eslint-plugin-unicorn: ^29.0.0
+      eslint-plugin-unicorn: ^30.0.0
     dependencies:
       '@brettz9/eslint-plugin': 1.0.3_eslint@7.24.0
       eslint: 7.24.0
@@ -2147,7 +2147,7 @@ packages:
       eslint-plugin-node: 11.1.0_eslint@7.24.0
       eslint-plugin-promise: 5.1.0_eslint@7.24.0
       eslint-plugin-radar: 0.2.1_eslint@7.24.0
-      eslint-plugin-unicorn: 29.0.0_eslint@7.24.0
+      eslint-plugin-unicorn: 30.0.0_eslint@7.24.0
       semver: 7.3.5
     dev: true
 
@@ -2354,11 +2354,11 @@ packages:
       eslint: 7.24.0
     dev: true
 
-  /eslint-plugin-unicorn/29.0.0_eslint@7.24.0:
-    resolution: {integrity: sha512-R9jGLKb2p6LuOixviByGlH2mkfY72EBELXAPeUufveebN0M2Woa7B7dUO3gN2xPn/+eGjrIm4I2u7dDtr9G4iA==}
+  /eslint-plugin-unicorn/30.0.0_eslint@7.24.0:
+    resolution: {integrity: sha512-ZKbE48Ep99z/3geLpkBfv+jNrzr2k7bLqCC/RfZOekZzAvn2/ECDE/d8zGdW1YxHmIC9pevQvm8Pl89v9GEIVw==}
     engines: {node: '>=10'}
     peerDependencies:
-      eslint: '>=7.20.0'
+      eslint: '>=7.23.0'
     dependencies:
       ci-info: 3.1.1
       clean-regexp: 1.0.0
@@ -2569,8 +2569,8 @@ packages:
       pkg-dir: 4.2.0
     dev: true
 
-  /find-es-resources/0.2.1_dc9d9d711f9715ea38ced5881f20889e:
-    resolution: {integrity: sha512-F352eLrExI+sc7zreSPwM0srTKtgMCGARa75I4VGq258jMrXqoWr2SD4zJwj9TJAKxdU021sX+Fdvo0efHoadA==}
+  /find-es-resources/0.3.0_dc9d9d711f9715ea38ced5881f20889e:
+    resolution: {integrity: sha512-OaKwKnQI76MSwVKgEzoyG7thsd+kz4DZgPxkHsQxgPsp91rUZDwNOAiVEHQ64ytvv9JYpvegd8ObdgH4fHwbyw==}
     engines: {node: '>=10.0.0'}
     dependencies:
       es-file-traverse: 0.10.0_dc9d9d711f9715ea38ced5881f20889e
