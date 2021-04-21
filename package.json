@@ -1,6 +1,6 @@
 {
   "name": "preassembled-worker-boxes",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "author": "Brett Zamir <brettz9@yahoo.com>",
   "contributors": [],
   "description": "Allows auto-detecting and baking in one's resource files for caching into a service worker",

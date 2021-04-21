@@ -34,7 +34,6 @@ const optionDefinitions = [
   },
   {
     name: 'swDest', type: String, alias: 'o',
-    multiple: true,
     description: 'Path to which to save the worker file. Defaults to `sw.js`.',
     typeLabel: '{underline service-worker destination path}'
   },

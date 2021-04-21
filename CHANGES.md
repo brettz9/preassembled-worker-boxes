@@ -1,5 +1,9 @@
 # CHANGES for `preassembled-worker-boxes`
 
+## 0.3.1
+
+- Fix: Change `swDest` to just a single string
+
 ## 0.3.0
 
 - Enhancement: Support `config` file option
