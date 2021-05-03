@@ -15,6 +15,27 @@ const findESResources = require('find-es-resources');
 */
 
 /**
+ * See {@link https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build#.getManifest}.
+ * @typedef {PlainObject} BuiltWorkboxInfo
+ * @property {number} count
+ * @property {string[]} filePaths
+ * @property {number} size
+ * @property {string[]} warnings
+ */
+
+/**
+* @typedef {PlainObject} WorkerboxInfo
+* @property {BuiltWorkboxInfo} info
+* @property {string[]} additionalManifestEntries
+* @property {FileLogger} logFiles
+*/
+
+/**
+* @callback FileLogger
+* @returns {void}
+*/
+
+/**
  * @type {PreassembledWorkerBoxesOptions} options
  * @returns {Promise<void>}
  */
@@ -48,6 +69,9 @@ async function preassembledWorkerBoxes (options) {
   return {
     info,
     additionalManifestEntries,
+    /**
+     * @type {FileLogger}
+     */
     logFiles () {
       const {warnings, count, size, filePaths} = info;
 
