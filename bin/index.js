@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-'use strict';
+import {join, dirname} from 'path';
+import {fileURLToPath} from 'url';
 
-const {join} = require('path');
+import {cliBasics} from 'command-line-basics';
+import preassembledWorkerBoxes from '../src/index.js';
 
-const {cliBasics} = require('command-line-basics');
-const preassembledWorkerBoxes = require('../src/index.js');
-
-const optionDefinitions = cliBasics(
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const optionDefinitions = await cliBasics(
   join(__dirname, '../src/optionDefinitions.js')
 );
 

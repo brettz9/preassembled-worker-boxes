@@ -1,8 +1,6 @@
-'use strict';
-
-const path = require('path');
-const workboxBuild = require('workbox-build');
-const findESResources = require('find-es-resources');
+import path from 'path';
+import workboxBuild from 'workbox-build';
+import {findESResources} from 'find-es-resources';
 
 /**
  * @external EsFileTraverseOptions
@@ -47,14 +45,17 @@ async function preassembledWorkerBoxes (options) {
     queryOptions,
     swDest = 'sw.js'
   } = options.config
-    // eslint-disable-next-line max-len -- Long
-    // eslint-disable-next-line import/no-dynamic-require, node/global-require -- Runtime
-    ? {...options, ...require(path.join(process.cwd(), options.config))}
+    ? {...options, ...(
+      // eslint-disable-next-line no-unsanitized/method -- Runtime
+      (await import(path.join(process.cwd(), options.config))).default
+    )}
     : options;
 
-  const additionalManifestEntries = await findESResources(
-    file, findESResourcesOptions, queryOptions
-  );
+  const additionalManifestEntries = await findESResources({
+    input: file,
+    esFileTraverseOptions: findESResourcesOptions,
+    queryOptions
+  });
 
   // https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build
   const info = await workboxBuild.generateSW({
@@ -92,4 +93,4 @@ async function preassembledWorkerBoxes (options) {
   };
 }
 
-module.exports = preassembledWorkerBoxes;
+export default preassembledWorkerBoxes;

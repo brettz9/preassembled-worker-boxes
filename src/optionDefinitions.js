@@ -1,6 +1,8 @@
-'use strict';
+import {readFile} from 'fs/promises';
 
-const pkg = require('../package.json');
+const pkg = JSON.parse(
+  await readFile(new URL('../package.json', import.meta.url))
+);
 
 const JSONParser = JSON.parse.bind(JSON);
 
@@ -77,5 +79,4 @@ const cliSections = [
   }
 ];
 
-exports.definitions = optionDefinitions;
-exports.sections = cliSections;
+export {optionDefinitions as definitions, cliSections as sections};

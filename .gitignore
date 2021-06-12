@@ -1,6 +1,9 @@
 node_modules
 .DS_Store
 .ignore
+coverage
+output.js
+output.json
 
 # Test-generated
 sw.js

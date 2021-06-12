@@ -1,6 +1,9 @@
 .nyc_output
+coverage
 pnpm-lock.yaml
 test
+output.js
+output.json
 
 # Test-generated
 sw.js

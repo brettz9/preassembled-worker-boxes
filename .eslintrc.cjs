@@ -2,7 +2,7 @@
 
 module.exports = {
   root: true,
-  extends: ['ash-nazg/sauron-node-script-overrides'],
+  extends: ['ash-nazg/sauron-node-overrides'],
   settings: {
     polyfills: [
       'console',
@@ -11,7 +11,8 @@ module.exports = {
       'JSON',
       'Object.entries',
       'Promise.all',
-      'Set'
+      'Set',
+      'URL'
     ]
   },
   overrides: [
@@ -33,12 +34,13 @@ module.exports = {
     },
     {
       files: ['test/fixtures/queryModule.js', 'test/fixtures/config.js'],
-      extends: ['ash-nazg/sauron-node-script-overrides']
+      extends: ['ash-nazg/sauron-node-overrides']
     }
   ],
   env: {
     es6: true
   },
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2020
   },

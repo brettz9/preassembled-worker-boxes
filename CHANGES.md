@@ -1,5 +1,12 @@
 # CHANGES for `preassembled-worker-boxes`
 
+## 0.4.0
+
+- Breaking change: Node 14+
+- Enhancement: Switch to native ESM
+- npm: Update `command-line-basics` (major), `find-es-resources` (major)
+- npm: Update devDeps.
+
 ## 0.3.1
 
 - Fix: Change `swDest` to just a single string

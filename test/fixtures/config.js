@@ -1,7 +1,7 @@
-'use strict';
-
-module.exports = {
+const config = {
   queryOptions: {
     queryModule: './test/fixtures/queryModule.js'
   }
 };
+
+export default config;
