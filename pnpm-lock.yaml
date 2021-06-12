@@ -25,14 +25,14 @@ specifiers:
   eslint-plugin-promise: ^5.1.0
   eslint-plugin-radar: ^0.2.1
   eslint-plugin-unicorn: ^33.0.1
-  find-es-resources: ^1.0.0
+  find-es-resources: ^1.0.1
   mocha: ^9.0.0
   sinon: ^11.1.1
   workbox-build: ^6.1.5
 
 dependencies:
   command-line-basics: 1.0.1
-  find-es-resources: 1.0.0_38914332fe097065530ccfff7ef6da75
+  find-es-resources: 1.0.1_38914332fe097065530ccfff7ef6da75
   workbox-build: 6.1.5
 
 devDependencies:
@@ -2840,8 +2840,8 @@ packages:
     dependencies:
       to-regex-range: 5.0.1
 
-  /find-es-resources/1.0.0_38914332fe097065530ccfff7ef6da75:
-    resolution: {integrity: sha512-H/Rd1pbnzhVw2uDVAooI8CKBY36aGq3MoM2+zRWGskgPBsYw59qjboHJ6KxTxVTQITcu6tWrFbLp8u6RpqMVQQ==}
+  /find-es-resources/1.0.1_38914332fe097065530ccfff7ef6da75:
+    resolution: {integrity: sha512-l5xLB0CDeNbkYqT21kWNQ9vvoAQk04qZnt1QSY7pqV8hLQ2vruJoNroegqPcxnkDKKlDxIAim5cSs4QKo7Rqlw==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
