@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "x": "find-es-resources -o output.json",
-    "prepublishOnly": "npm run build-cli",
+    "prepublishOnly": "pnpm i && npm run build-cli",
     "build-cli-svg": "clp --format=svg --config=src/optionDefinitions.js badges/cli.svg",
     "build-cli": "npm run build-cli-svg",
     "bin": "./bin/index.js",
