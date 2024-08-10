@@ -8,7 +8,7 @@ import {findESResources} from 'find-es-resources';
  */
 
 /**
-* @typedef {external:EsFileTraverseOptions} PreassembledWorkerBoxesOptions
+* @typedef {EsFileTraverseOptions} PreassembledWorkerBoxesOptions
 * @property {string} [swDest="sw.js"]
 */
 
@@ -42,11 +42,11 @@ async function preassembledWorkerBoxes (options) {
     file,
     findESResourcesOptions,
     workboxBuildOptions,
-    queryOptions,
+    queryModule,
     swDest = 'sw.js'
   } = options.config
     ? {...options, ...(
-      // eslint-disable-next-line no-unsanitized/method -- Runtime
+      // // eslint-disable-next-line no-unsanitized/method -- Runtime
       (await import(path.join(process.cwd(), options.config))).default
     )}
     : options;
@@ -54,7 +54,7 @@ async function preassembledWorkerBoxes (options) {
   const additionalManifestEntries = await findESResources({
     input: file,
     esFileTraverseOptions: findESResourcesOptions,
-    queryOptions
+    queryModule
   });
 
   // https://developers.google.com/web/tools/workbox/reference-docs/latest/module-workbox-build

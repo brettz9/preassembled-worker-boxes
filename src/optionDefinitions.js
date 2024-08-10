@@ -7,7 +7,7 @@ const pkg = JSON.parse(
 const JSONParser = JSON.parse.bind(JSON);
 
 const getChalkTemplateSingleEscape = (s) => {
-  return s.replace(/[{}\\]/gu, (ch) => {
+  return s.replaceAll(/[{}\\]/gu, (ch) => {
     return `\\u${ch.codePointAt().toString(16).padStart(4, '0')}`;
   });
 };
@@ -58,8 +58,8 @@ const optionDefinitions = [
     typeLabel: '{underline JSON object string}'
   },
   {
-    name: 'queryOptions', type: JSONParser,
-    description: 'Additional `queryOptions` to pass to `find-es-resources`. ' +
+    name: 'queryModule', type: String,
+    description: '`queryModule` option to pass to `find-es-resources`. ' +
       'Note that any items discovered on the object returned by the ' +
       'requiring of the `queryModule` module will be merged onto the ' +
       'built-in queries of `find-es-resources`.',

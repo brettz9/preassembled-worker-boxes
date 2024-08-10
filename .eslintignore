@@ -1,8 +1,0 @@
-!.*.js
-output.js
-
-# Test-generated
-sw.js
-sw.js.map
-workbox-*.js
-workbox-*.js.map

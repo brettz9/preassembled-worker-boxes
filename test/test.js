@@ -1,6 +1,7 @@
 import {join, dirname} from 'path';
 import {fileURLToPath} from 'url';
 
+import {expect} from 'chai';
 import sinon from 'sinon';
 
 import preassembledWorkerBoxes from '../src/index.js';
@@ -101,9 +102,7 @@ describe('preassembledWorkerBoxes', function () {
   it('Bakes in resources (with custom `queryModule`)', async function () {
     const {info, additionalManifestEntries} = await preassembledWorkerBoxes({
       file: getFixturePath('file-with-custom-items.js'),
-      queryOptions: {
-        queryModule: './test/fixtures/queryModule.js'
-      }
+      queryModule: './test/fixtures/queryModule.js'
     });
     // console.log('info', info);
 

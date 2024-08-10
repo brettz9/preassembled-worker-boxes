@@ -1,5 +1,9 @@
 # CHANGES for `preassembled-worker-boxes`
 
+## 0.5.0 (unreleased)
+
+- fix: supply `command-line-basics` notifier info
+
 ## 0.4.0
 
 - Breaking change: Node 14+
